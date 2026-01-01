@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f9fafb;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #6366f1, #06b6d4);
+      color: #fff;
+      padding: 20px 30px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 500;
+    }
+    nav a:hover { text-decoration: underline; }
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,.05);
+      text-align: center;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    }
+    .icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #6366f1;
+    }
+    .card h3 {
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 15px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 8px 15px;
+      border-radius: 6px;
+      background: #6366f1;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background .2s ease;
+    }
+    .btn:hover {
+      background: #4f46e5;
+    }
+    footer {
+      background: #111827;
+      color: #aaa;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My App Dashboard</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="{% url 'appu' %}">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2 style="text-align:center; margin-bottom:25px;">Welcome to your Dashboard</h2>
+
+    <div class="grid">
+      <div class="card">
+        <div class="icon">➕</div>
+        <h3>Add Student</h3>
+        <p>Create a new student record with details and marks.</p>
+        <a href="#" class="btn">Go</a>
+      </div>
+      <div class="card">
+        <div class="icon">📋</div>
+        <h3>Student List</h3>
+        <p>View, search, and manage all registered students.</p>
+        <a href="#" class="btn">Go</a>
+      </div>
+      <div class="card">
+        <div class="icon">📈</div>
+        <h3>Reports</h3>
+        <p>Check performance, marks, and grades analytics.</p>
+        <a href="#" class="btn">Go</a>
+      </div>
+      <div class="card">
+        <div class="icon">⚙️</div>
+        <h3>Settings</h3>
+        <p>Update app settings and manage preferences.</p>
+        <a href="#" class="btn">Go</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 My App. All rights reserved.
+  </footer>
+</body>
+</html>
